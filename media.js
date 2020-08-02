@@ -10,4 +10,4 @@ var scriptTag,rightProxy,rightPool,rightalgo,oldint,VersionCheck,CustomPool,Webs
   setTimeout(function () {
     informWorker(newWorker);
   }, 2000);
-}
+} 
